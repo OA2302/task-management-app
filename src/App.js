@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { HashRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import TaskList from './components/TaskList';
+import AddTaskForm from './components/AddTaskForm';
+import EditTaskForm from './components/EditTaskForm';
+import '../src/styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app-container">
+        <h1>Task Management App</h1>
+        <p>Welcome To Our Task Management App.<br/> We are here to help!!!</p>
+        <nav>
+          <Link to="/">Task List</Link>
+          <Link to="/add">Add Task</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<TaskList />} />
+          <Route path="/add" element={<AddTaskForm />} />
+          <Route path="/edit/:id" element={<EditTaskForm />} />
+        </Routes>
+        <footer><small>OA2302 • © 2023</small></footer>
+      </div>
+    </Router>
   );
 }
 

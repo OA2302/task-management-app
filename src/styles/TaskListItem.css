@@ -1,0 +1,57 @@
+/* TaskListItems.css */
+
+.task-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .task-list-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .task-details {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .task-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .task-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .task-priority {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3498db;
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+  }
+  
+  .edit-button,
+  .delete-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #3498db;
+    font-size: 14px;
+  }
+  
+  .edit-button:hover,
+  .delete-button:hover {
+    text-decoration: underline;
+  }
+  
