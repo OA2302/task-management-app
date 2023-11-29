@@ -23,6 +23,10 @@ function EditTaskForm() {
       setTask(existingTask);
     }
   }, [id]);
+  const handleCancel = () => {
+    navigate('/');
+  };
+  
   
   const handleChange = (e) => {
     setTask({
@@ -80,9 +84,15 @@ function EditTaskForm() {
             <option value="high">High</option>
           </select>
         </label>
-        <button type="submit" className="button">
+       <div className='flex'>
+       <button type="submit" className="button">
           Save Changes
         </button>
+        <button type="button" className="btn" onClick={handleCancel}>
+          Cancel
+          </button>
+
+       </div>
       </form>
     </div>
   );

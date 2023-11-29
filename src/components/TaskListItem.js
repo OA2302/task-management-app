@@ -18,8 +18,10 @@ function TaskListItems({ task, onDelete, onEdit }) {
   };
 
   const handleEdit = () => {
+    onEdit(task.id);  // Pass the task ID to onEdit function
     navigate(`/edit/${task.id}`);
   };
+  
 
   const itemStyle = completed ? { textDecoration: 'line-through' } : {};
 
@@ -51,7 +53,7 @@ function TaskListItems({ task, onDelete, onEdit }) {
 TaskListItems.propTypes = {
   task: PropTypes.object.isRequired,
   onDelete: PropTypes.func.isRequired,
-  onEdit: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired
 };
 
 export default TaskListItems;

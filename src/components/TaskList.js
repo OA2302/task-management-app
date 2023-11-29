@@ -14,23 +14,25 @@ function TaskList() {
     deleteTask(id);
     setTasks(getTasks());
   };
+    
 
   const handleComplete = (id) => {
     markTaskCompleted(id);
     setTasks(getTasks());
   };
-
+  
   return (
     <div>
       <h1>Task List</h1>
       {tasks.map((task) => (
         <TaskListItems
-          key={task.id}
-          task={task}
-          onDelete={handleDelete}
-          onEdit={handleComplete}
-        />
-      ))}
+        key={task.id}
+        task={task}
+        onDelete={() => handleDelete(task.id)}
+        onEdit={handleComplete}
+      />
+))}
+
     </div>
   );
 }

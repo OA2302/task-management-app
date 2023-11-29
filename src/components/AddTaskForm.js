@@ -39,10 +39,10 @@ function AddTaskForm() {
     });
     setSuccessMessage('Task added successfully!');
 
-    // Clear success message after 3 seconds
+    // clear success message after 3 seconds
     setTimeout(() => {
       setSuccessMessage('');
-      // Navigate to the home page after success
+      // navigate to the home page after success
       navigate('/');
     }, 3000);
   };
@@ -59,6 +59,7 @@ function AddTaskForm() {
             value={task.name}
             onChange={handleChange}
             className="input-field"
+            placeholder="e.g Study"
           />
         </label>
         <label className="label">
@@ -68,6 +69,7 @@ function AddTaskForm() {
             value={task.description}
             onChange={handleChange}
             className="input-field"
+            placeholder="e.g I need to study for my school mathemathics competition."
           />
         </label>
         <label className="label">
@@ -84,7 +86,7 @@ function AddTaskForm() {
           </select>
         </label>
         <button type="submit" className="button">
-          Save Task
+          Add Task
         </button>
       </form>
       {successMessage && (

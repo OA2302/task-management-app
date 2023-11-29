@@ -1,6 +1,5 @@
-/* AddTaskForm.css */
-
 .add-task-container {
+  animation: fadeIn 2s ease-in-out forwards;
   max-width: 400px;
   margin: 0 auto;
 }
